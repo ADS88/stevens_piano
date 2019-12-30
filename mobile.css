@@ -1,0 +1,24 @@
+.about-image{
+    display: none;
+}
+
+#contact .contact-image{
+    display: none;
+}
+
+#services .items{
+    display: block;
+}
+
+#services .item{
+    border-bottom: 0.01rem solid #1A1914;
+}
+
+#main-navbar {
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-navbar .logo{
+    margin-bottom: 1rem;
+}
