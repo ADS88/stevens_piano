@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
   
   
   // Smooth Scrolling
-  $('#main-navbar a').on('click', function(event) {
+  $('a').on('click', function(event) {
     if (this.hash !== '') {
       event.preventDefault();
   
@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
   
       $('html, body').animate(
         {
-          scrollTop: $(hash).offset().top - 100
+          scrollTop: $(hash).offset().top - 60
         },
         800
       );
