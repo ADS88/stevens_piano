@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root{
+    --dark-primary-colour: #1A1914;
+    --light-primary-colour: white;
+    --accent-colour: #F0A459;
+    --muted-text-colour: #C8C8C8;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Utility classes*/
+.py-1{padding: 3rem 0;}
+.py-2{padding: 1.5rem 0;}
+.py-3{padding: 1rem 0;}
+.py-4{padding: 0.5rem 0;}
+
+.button{
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: 'Inria Serif', serif;
+}
+
+.button-accent{
+    color: var(--dark-primary-colour);
+    background: var(--accent-colour);
+    margin: 1rem;
+    padding: 1.25rem 2.25rem;
+}
+
+.button-dark{
+    background: var(--dark-primary-colour);
+    color: var(--accent-colour);
+}
+
+.button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:focus {outline:0;}
+
+body{
+    background: var(--dark-primary-colour);
+    font-family: 'Inria Serif', serif;
+}
+
+.large-heading{font-size: 4rem;}
+.medium-heading{font-size: 2.5rem;}
+
+.medium-text{font-size: 1.25rem;}
+
+.text-primary{
+    color: var(--accent-colour);
+}
+
+/*Navigation*/
+#main-navbar{
+    position: sticky;
+    top: 0;
+    background: var(--dark-primary-colour);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 1rem;
+    font-family: 'Inria Serif', serif;
+}
+
+#main-navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-navbar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#main-navbar ul a{
+    text-decoration: none; 
+    padding: 0.75rem;
+    color: var(--muted-text-colour);
+    margin: 0 0.25rem;
+}
+
+#main-navbar h1{
+    color: var(--muted-text-colour);
+}
+
+#main-navbar ul li a:hover{
+    background: var(--accent-colour);
+    border-radius: 0.25rem;
+    color: var(--light-primary-colour);
+}
+
+/* Showcase area */
+#showcase{
+    background: var(--dark-primary-colour) url('../img/cover.jpg')
+    no-repeat center center/cover;
+    height: 100vh;
+    color: var(--muted-text-colour);
+}
+
+#showcase .content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    position: absolute; 
+    top: 61px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Services */
+#services .container{
+    text-align: center;
+    background: var(--light-primary-colour);
+}
+
+#services .items{
+    display: flex;
+    color: var(--dark-primary-colour);
+}
+
+#services .item{
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    color: var(--dark-primary-colour);
+}
+
+#services .item i{
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--accent-colour);
+    color: var(--light-primary-colour);
+    border-radius: 50%;
+}
+
+#services a{
+    text-decoration: none;
+    color: var(--accent-colour);
+}
+
+/*About*/
+#about{
+    background: var(--dark-primary-colour);
+    color: var(--light-primary-colour);
+    display: flex;
+}
+
+.about-image{
+    flex: 1;
+    background: var(--dark-primary-colour) url('../img/steven.jpg')
+    no-repeat center center/cover;
+}
+
+#about h4{
+    margin-top: 1rem;
+}
+
+.about-text{
+    flex: 1;
+    padding: 2rem;
+    color: var(--muted-text-colour);
+}
+
+.about-text ul{
+    margin-left: 1rem;
+}
+
+/*Contact form*/
+#contact{
+    background: var(--light-primary-colour);
+    display: flex;
+}
+
+#contact .contact-form{
+    padding: 2rem;
+    flex: 2;
+    background-color: var(--accent-colour);
+    
+}
+
+#contact .contact-image{
+    flex: 1;
+    background: var(--dark-primary-colour) url('../img/piano.jpg')
+    no-repeat center center/cover;
+}
+
+#contact .contact-form .form-group{
+    margin: 0.75rem 0;
+}
+
+#contact .contact-form label{
+    display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#contact .contact-form input:focus{
+    outline: None;
+}
+
+/*Social media links*/
+#social .items{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+#social .items i{
+    color: var(--muted-text-colour);
+}
+
+#social .items i:hover{
+    animation-name: change-orange;
+    animation-duration: 1s;
+}
+
+@keyframes change-orange{
+
+    100%{
+        color: var(--accent-colour);
+    }
+}
+
+#social h2{
+    text-align: center;
+    color: var(--accent-colour);
+}
+
+footer h3{
+    text-align: center;
+    color: var(--muted-text-colour);
+    margin-bottom: 0.5rem;
+}
